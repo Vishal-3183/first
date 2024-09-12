@@ -1,0 +1,426 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Be Vietnam Pro", "sans-serif";
+}
+.wrapper{
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* nav bar  */
+
+.navbar{ 
+    /* background-color: red; */
+    margin-left: 5rem;
+    position: sticky;
+    z-index: 500;
+    display:flex;
+    width: 1000px;
+    height: 3rem;
+    justify-content: space-between;
+}
+.nav_left{
+    height: 100%;
+}
+.nav_left img{
+    /* margin-top: 10px; */
+    height: 100%;
+}
+#name{
+    /* margin-top: -15px; */
+    margin-bottom: 15px;
+}
+.nav_right{
+    display: flex;
+    margin-top: 10px;
+    /* justify-content: space-between; */
+    gap: 50px;
+}
+.nav_right a{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    transition: 1s;
+}
+.box:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* hero section */
+
+.hero{
+    position: relative;
+    /* background-color: aqua; */
+    margin-left: 5rem;
+    height: 100%;
+    width: 1000px;
+    display: flex;
+}
+.hero_left{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_content{
+    margin-top: 8rem;
+
+}
+.hero_content p{
+    font-size: 15px;
+}
+#fade{
+    position: absolute;
+    bottom: -24px;
+    font-size: 100px;
+    font-weight: 800;
+    color: antiquewhite;
+    user-select: none;
+}
+.hirebtn{
+    /* margin-top: 3rem; */
+    position: relative;
+    /* margin: 5rem 5rem; */
+    width: fit-content;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    background-color: orangered;
+    z-index: 5;
+    cursor: pointer;
+    font-size: 18px;
+}
+.hirebtn::before{
+    content: "";
+    position: absolute;
+    background-color:white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -5;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 0.8s;
+}
+.hero_right{
+    /* background-color: red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hirebtn:hover{
+    color: black;
+    border: 2px solid orangered;
+}
+.hirebtn:hover::before{
+    transform:scaleX(1);
+}
+.user_image{
+    height: 350px;
+    width: 300px;
+    position: relative;
+}
+.user{
+    height: 100%;
+    width: 100%;
+    padding: 35px;
+    transform: scale(1);
+    animation-name: userimage;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    filter: grayscale(1);
+}
+@keyframes userimage {
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+    }
+}
+
+.absolute{
+    position: absolute;
+}
+.circle{
+    bottom: 0;
+    left: 0;
+    animation-name: circleimg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes circleimg {
+    50%{
+        left: 12px;
+        bottom: 12px;
+    }
+    
+}
+.dots{
+    bottom: 0;
+    right: 0;
+    animation-name: dotimg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes dotimg {
+    50%{
+        bottom: 12px;
+    }
+    
+}
+.cube{
+    top: 0;
+    right: 0;
+    animation-name: cubeimg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes cubeimg {
+    50%{
+        transform: rotateY(180deg);
+    }
+}
+.plus{
+    top: 0;
+    right: 50%;
+    animation-name: plusimg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes plusimg {
+    50%{
+        top: 12px;
+    }
+}
+.zigzag{
+    top: 0;
+    left:0;
+    animation-name: zigzagimg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes zigzagimg {
+    50%{
+        left: 12px;
+    }
+}
+
+/* project section */
+
+.project{
+    padding: 4rem;
+    /* margin-top: 4rem; */
+    background-color:antiquewhite;
+}
+.project h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: orangered;
+}
+.project_container{
+    /* background-color: yellow; */
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 100%;
+    gap: 100px;
+} 
+.project_card{
+    
+    position: relative;
+    width: 900px;
+    height: 400px;
+    background-size: cover;
+    box-shadow:0px 0px 40px #1f1f1f;
+    z-index: 2;
+ 
+} 
+.content_left{
+    /* background-color: red; */
+    left: 100px;
+    top: 170px;
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    color: white;
+    transform: scale(1);
+}
+.content_right{
+    /* background-color: red; */
+    position: absolute;
+    right: 100px;
+    top: 170px;
+    width: 50%;
+    height: 70%;
+    color: white;
+    transform: scale(1);
+}
+.project_card:hover .content{
+   transform: scale(1.1);
+   z-index: 20;
+}
+.card1_icon{
+    width: 60%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon1{
+    width: 40px;
+
+}
+#card1{
+    align-self: flex-start;
+    background-image: url(project/Project1.png);
+}
+#card2{
+    align-self: flex-end;
+    background-image: url(project/Project2.png);
+}
+#card3{
+    align-self: flex-start;
+    background-image: url(project/Project3.png);
+}
+#card4{
+    align-self: flex-end;
+    background-image: url(project/Project4.png);
+}
+.number_right{
+    position: absolute;
+    right: -40px;
+    top: -20px;
+    color: white;
+    font-size: 150px;
+    font-weight: 800;
+    z-index: 15;
+    display: none;
+}
+.number_left{
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    color: white;
+    font-size: 150px;
+    font-weight: 800;
+    z-index: 15;
+    display: none;
+}
+.project_card:hover .number_right{
+    display: block;
+    
+}
+.project_card:hover .number_left{
+    display: block;
+    
+}
+.project_card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.328);
+    z-index: 5;
+}
+.project_card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    background-color: rgba(0, 0, 255, 0.252);
+    z-index: 8;
+}
+.project_card:hover::before{
+    transform: scaleX(1);
+}
+.discreption{
+    margin-top: 4rem;
+    display: flex;
+    gap: 100px;
+    height: 100%;
+    width: 100%;
+}
+.dis_right{
+    width: 50%;
+}
+.dis_left{
+    width: 50%;
+}
+.dis_icons{
+    margin-right: 4rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 80%;
+    width: 80%;
+}
+.all_icon{
+    width: 70px;
+    height: 70px;
+    /* transform: scale(1); */
+}
+.all_icon:hover{
+    transform: scale(1.4);
+}
+.blob_icon{
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    z-index: -5;
+    animation-name: blob;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes blob {
+    50%{
+        top: 5%;
+        left: 2%;
+    }
+}
+.dis_content{
+    width: 80%;
+    position: relative;
+    left: 5rem;
+}
+.dis_content p{
+    text-align: justify;
+    font-size: 18px;
+}
+.dis_content h2{
+    color: orangered;
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+#caps{
+    font-size: 55px;
+    font-weight: bold;
+}
